@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>提交报修 - 信科校园报修与智能运维平台</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <a href="index.html">← 返回首页</a>
+      <h2>提交报修工单</h2>
+    </div>
+
+    <form id="repairForm" class="form-box">
+      <div class="form-item">
+        <label>报修人姓名 <span class="required">*</span></label>
+        <input type="text" id="userName" required placeholder="请输入姓名">
+      </div>
+      <div class="form-item">
+        <label>联系电话 <span class="required">*</span></label>
+        <input type="tel" id="userPhone" required placeholder="请输入手机号">
+      </div>
+      <div class="form-item">
+        <label>报修区域 <span class="required">*</span></label>
+        <select id="areaSelect" required>
+          <option value="">-- 请选择区域 --</option>
+        </select>
+      </div>
+      <!-- 新增：报修区域下的自由填写详细地址框 -->
+      <div class="form-item">
+        <label>详细地址（自由填写）</label>
+        <input type="text" id="detailAddress" placeholder="请输入详细地址，如：3号教学楼二层203教室 / 5号宿舍楼306室">
+      </div>
+      <div class="form-item">
+        <label>故障大类 <span class="required">*</span></label>
+        <select id="faultCategory" required>
+          <option value="">-- 请选择故障大类 --</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label>具体故障 <span class="required">*</span></label>
+        <select id="faultType" required>
+          <option value="">-- 先选择故障大类 --</option>
+        </select>
+      </div>
+
+      <!-- 方案4 联动加分项：选择具体故障后实时预览机械评估 -->
+      <div id="mechPreview" class="mech-preview"></div>
+
+      <div class="form-item">
+        <label>故障详细描述 <span class="required">*</span></label>
+        <textarea id="faultDesc" rows="4" required placeholder="描述故障现象、发生情况"></textarea>
+      </div>
+
+      <div class="form-item">
+        <label>上传故障图片（可选，支持模拟AI机械失效诊断）</label>
+        <input type="file" id="imgUpload" accept="image/*">
+        <div id="previewBox" class="preview-box"></div>
+        <!-- 方案4：模拟AI机械失效诊断结果醒目标注区块 -->
+        <div id="aiBlock" class="ai-block"></div>
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" class="btn primary">提交报修</button>
+        <button type="reset" class="btn default">重置表单</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

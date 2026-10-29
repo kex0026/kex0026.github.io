@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>报修看板 - 信科校园报修与智能运维平台</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <a href="index.html">← 返回首页</a>
+      <h2>报修工单看板</h2>
+    </div>
+
+    <div class="filter-bar">
+      <span>筛选：</span>
+      <select id="statusFilter">
+        <option value="">全部状态</option>
+      </select>
+      <span style="margin-left:16px;color:#666;">每条工单可【查看机械评估报告】—— 机械专业失效评估独立重点板块</span>
+    </div>
+
+    <div id="orderList" class="order-list">
+      <div class="empty-tip">暂无报修工单</div>
+    </div>
+  </div>
+
+  <!-- 方案3：机械工程故障评估报告弹窗 -->
+  <div id="modalMask" class="modal-mask">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <h3>🛠️ 机械工程故障评估报告</h3>
+        <button type="button" id="modalClose" class="modal-close">×</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

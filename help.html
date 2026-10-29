@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>帮助说明 - 信科校园报修与智能运维平台</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <a href="index.html">← 返回首页</a>
+      <h2>项目帮助说明</h2>
+    </div>
+
+    <div class="help-box">
+      <section>
+        <h3>📌 项目简介</h3>
+        <p><strong>信科校园报修与智能运维平台</strong>是<strong>机械（机械设计制造及其自动化）+ 计算机</strong>跨专业联合实训项目。面向校园师生，实现线上提交设施报修、维修人员在线管理工单流程，搭载<strong>模拟AI机械失效诊断</strong>与<strong>机械工程故障评估</strong>能力，实现校园设施智能化运维管理。区别于普通后勤报修系统，本平台核心亮点在于<strong>机械失效机理分析 + 结构风险评估 + 工程维修方案</strong>的跨专业融合。</p>
+      </section>
+
+      <section>
+        <h3>👥 跨专业分工</h3>
+        <div class="two-col">
+          <div class="block">
+            <h4>🛠️ 机械专业方向</h4>
+            <ul>
+              <li>构建<b>故障评估知识库</b>（data.js）：为每个故障编写失效机理分析</li>
+              <li>判定结构风险等级（紧急/高风险/一般/轻微）</li>
+              <li>制定推荐维修工程方案、是否需结构强度复核</li>
+              <li>输出机械工程角度的安全风险提示</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h4>💻 计算机专业方向</h4>
+            <ul>
+              <li>页面结构搭建、样式布局、响应式适配</li>
+              <li>表单校验、模拟AI识别逻辑与自动预填联动</li>
+              <li>动态渲染机械评估报告、运维看板实现</li>
+              <li>工单本地存储、代码模块化与项目结构维护</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>🎯 答辩创新亮点（区别于普通报修系统）</h3>
+        <ul>
+          <li><strong>机械失效评估模块：</strong>每条工单携带完整机械工程故障评估报告——失效机理、结构风险等级、推荐维修方案、是否需结构强度复核，体现机械专业深度。</li>
+          <li><strong>模拟AI机械失效诊断：</strong>上传图片后，模拟AI不再只识别"什么东西坏了"，而是输出失效类型与工程维修建议，并<strong>自动匹配故障库、预填表单与机械评估内容</strong>（联动效果）。</li>
+          <li><strong>风险等级颜色标识：</strong>紧急=红色、高风险=橙色、一般=蓝色、轻微=灰色，强化工程评估的直观性。</li>
+          <li><strong>跨专业数据贯通：</strong>机械专业构建知识库（data.js），计算机专业动态渲染评估报告，工单提交时完整携带机械评估数据，在看板读取展示，实现"机械知识 + 信息化平台"融合。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>🔁 系统业务流程</h3>
+        <ol>
+          <li>师生进入【提交报修】，填写信息、选择区域与详细地址、选择故障（可实时预览机械评估）、上传图片</li>
+          <li>模拟AI识别图片，输出机械失效诊断结论，一键采纳后自动预填表单与机械评估内容</li>
+          <li>提交后生成工单，完整机械评估数据与详细地址一并存入本地存储</li>
+          <li>维修人员在【报修看板】查看工单，点击【查看机械评估报告】查看失效机理与维修方案，修改工单状态（待接单→维修中→已完成/驳回）</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>⚠️ 版本说明</h3>
+        <p>当前为纯前端静态演示版本，数据保存在浏览器 localStorage，清空缓存数据会丢失。适合课程设计展示。故障评估知识库集中在 data.js，便于机械专业同学扩展维护。</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
